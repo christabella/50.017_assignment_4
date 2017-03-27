@@ -27,7 +27,7 @@ public:
             return false;
         
         float t = -(m_D + Vector3f::dot(m_normal, Ro)) / denom;
-        if (t >= tmin && t < h.getT()) {            
+        if (t >= tmin && t < h.getT()) {
             // Update Hit
             h.set(t, m_material, m_normal);
             return true;
