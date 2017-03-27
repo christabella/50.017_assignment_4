@@ -29,19 +29,23 @@ public:
 	}
 	
 	virtual bool intersect( const Ray& r , Hit& h , float tmin ) {
+        for (Object3D* obj : m_objects) {
+            if (obj->intersect(r, h, tmin))
+                return true;
+        }
 		return false;
 	}
 	
 	void addObject( int index , Object3D* obj ){
-		
+        m_objects.push_back(obj);
 	}
 	
 	int getGroupSize(){
-		return 0;
+		return (int) m_objects.size();
 	}
 	
 private:
-	
+    vector<Object3D*> m_objects;
 };
 
 #endif

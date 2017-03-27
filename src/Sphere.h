@@ -15,7 +15,7 @@ public:
 	Sphere(){ 
 		//unit ball at the center
         m_center = Vector3f();
-        m_radius = 1.0;        
+        m_radius = 1.0;
 	}
 
 	Sphere( Vector3f center , float radius , Material* material ):Object3D(material){
@@ -55,15 +55,16 @@ public:
         
         if (discriminant >= 0) {
             // Check t0 which should be closer to the ray origin
-            if (t0 >= tmin && t0 <= h.getT()) {
+            if (t0 >= tmin && t0 < h.getT()) {
                 Vector3f normal = (r.pointAtParameter(t0) - m_center).normalized();
                 
+                // Update Hit
                 h.set(t0, material, normal);
                 return true;
             }
             
             // Check t1
-            if (t1 >= tmin && t1 <= h.getT()) {
+            if (t1 >= tmin && t1 < h.getT()) {
                 Vector3f normal = (r.pointAtParameter(t1) - m_center).normalized();
                 
                 h.set(t0, material, normal);
