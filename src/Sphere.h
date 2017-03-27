@@ -43,7 +43,7 @@ public:
          
          */
         Vector3f Rd = r.getDirection();
-        Vector3f Ro = r.getOrigin() - m_center; // uhhh...
+        Vector3f Ro = r.getOrigin() - m_center; // uhhuh...
         
         float a = Vector3f::dot(Rd, Rd); // should = 1
         float b = 2.0 * Vector3f::dot(Rd, Ro);
