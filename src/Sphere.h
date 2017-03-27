@@ -59,7 +59,7 @@ public:
                 Vector3f normal = (r.pointAtParameter(t0) - m_center).normalized();
                 
                 // Update Hit
-                h.set(t0, material, normal);
+                h.set(t0, m_material, normal);
                 return true;
             }
             
@@ -67,7 +67,7 @@ public:
             if (t1 >= tmin && t1 < h.getT()) {
                 Vector3f normal = (r.pointAtParameter(t1) - m_center).normalized();
                 
-                h.set(t0, material, normal);
+                h.set(t1, m_material, normal);
                 return true;
             }
         }
