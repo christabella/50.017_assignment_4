@@ -33,9 +33,9 @@ public:
          Sub. explicit ray equation into implicit plane equation and solve for 
          closest positive t.
          
-         (Rd*Rd) t^2 + (2Rd*Ro) t + (Ro*Ro - r^2) = 0
-         '--,--'       '---,--'     '-----,-----'
-            a              b              c
+         (Rd.Rd) * t^2 + (2Rd.Ro) * t + (Ro.Ro - r^2) = 0
+         '--,--'         '---,--'       '-----,-----'
+            a                b                c
          
          a = 1 since ||Rd|| = ||d|| = 1
          
