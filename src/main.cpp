@@ -73,8 +73,8 @@ int main( int argc, char* argv[] )
     Camera* camera = scene.getCamera();
     float tmin = camera->getTMin();
     
-    for (int i = 0; i < width; i++) {
-        for (int j = 0; j < height; j++) {
+    for (int j = 0; j < width; j++) {
+        for (int i = 0; i < height; i++) {
             // translate image pixel coordinates (i, j) to camera point (x, y)
             // https://www.scratchapixel.com/lessons/3d-basic-rendering/ray-tracing-generating-camera-rays/generating-camera-rays
             // "We first need to normalize this pixel position using the frame's dimensions..."

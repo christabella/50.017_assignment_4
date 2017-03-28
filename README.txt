@@ -1,11 +1,9 @@
-If you are using XCode, changing arguments via
-Product -> Scheme -> Edit Scheme -> Run -> Arguments 
-can be quite convenient for this assignment.
-
+Please go into build > Products to find the executable a4.
 -----------------------------------------
-IMPROVEMENTS:
+PROBLEMS:
 
 * I should not put functions that are more than one line in the header files... Should factor them out into .cpp files...
+* Something bugs with lighting...
 -----------------------------------------
 USEFUL RESOURCES:
 
@@ -30,3 +28,4 @@ I think bullet point 15. also has an error. Shouldn't c_s be V dot R and not L d
 
 -----------------------------------------
 EXTRA CREDIT:
+* --depth option implemented
