@@ -13,7 +13,7 @@ public:
 	Plane() {}
 	Plane( const Vector3f& normal , float d , Material* m):Object3D(m) {
         m_normal = normal;
-        m_D = -d; //CONFUSING AS FUCK????
+        m_D = d * -1.0f; //????
         m_material = m;
 	}
 	~Plane() {}

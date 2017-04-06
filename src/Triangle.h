@@ -23,7 +23,7 @@ public:
         m_c = c;
 	}
 
-	virtual bool intersect( const Ray& r,  Hit& h , float tmin){
+	virtual bool intersect( const Ray& r,  Hit& h , float tmin) {
         Vector3f Rd = r.getDirection(); // .normalized()?
         Vector3f Ro = r.getOrigin();
         
@@ -55,6 +55,8 @@ public:
         if (beta + gamma > 1 || beta < 0 || gamma < 0){
             return false;
         }
+        
+        alpha = 1 - beta - gamma;
         
         if (t >= tmin && t < h.getT()) {
             // Interpolate normals and texture coordinates

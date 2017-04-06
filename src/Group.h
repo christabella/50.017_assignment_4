@@ -29,11 +29,12 @@ public:
 	}
 	
 	virtual bool intersect( const Ray& r , Hit& h , float tmin ) {
+        bool result = false;
         for (Object3D* obj : m_objects) {
             if (obj->intersect(r, h, tmin))
-                return true;
+                result = true;
         }
-		return false;
+		return result;
 	}
 	
 	void addObject( int index , Object3D* obj ){
